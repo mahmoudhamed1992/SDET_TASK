@@ -109,17 +109,19 @@ public class TestCases extends BaseTest{
 		assertEquals(registerPage.getValidationMessageText(),"The Password field must contain a Capital Letter", "Incorrect Validation Text");
 	}
 	
-	public void testPasswordLessThanEightCharValidation() {
+	public void testPasswordMOREThanEightCharValidation() {
 		registerPage.setFristName("Name");
 		registerPage.setLastName("Looool");
 		registerPage.setPhoneNumber("03423dfssd");
 		registerPage.setEmail("test100000@test.com");
-		registerPage.setPassword("aa");
-		registerPage.setConfirmPassword("aa");
+		registerPage.setPassword("aaReeeeeee");
+		registerPage.setConfirmPassword("aaReeeeeee");
 		registerPage.clickSignUpButtonForValidation();
 		registerPage.implicitWaitValidation();
 		assertEquals(registerPage.getValidationMessageText(),"The Password field must be at least 6 characters in length.", "Incorrect Validation Text");
 	}
+
+	
 
 	
 	
